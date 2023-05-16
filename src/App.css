@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: gainsboro;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  list-style-type: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.navbar {
+  height: 100px;
+  margin-bottom: 50px;
+  background-color: lightgrey;
+}
+
+
+.navbar .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.navbar .logo {
+  font-size: 40px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar a {
+  color:cornflowerblue;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: lightblue;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0px 20px;
+}
+
+.main .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recentwinners ul li {
+  text-align: center;
+}
+
+.signup h3 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.signup-form label, input  {
+  margin-right: 10px
+}
+
+.recentwinners {
+  min-width: 300px;
+}
+
+.recentwinners h3 {
+  text-align: center;
+}
+
+.contestants {
+  margin-top: 25px
+}
+.contestants ul{
+  height:200px;
+  width:100%;
+  overflow:hidden;
+  overflow-y:scroll;
+  background-color: lightgray;
+}
+
+.recentwinners .winner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin {
+  flex-direction: column;
+  max-width: 1000px;
+}
+
+.matches {
+  display: flex;
+  flex-direction: column;
+}
+
+.match {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.match p {
+  display: inline-block;
+}
+
+/* .match p:first-child{
+  flex-grow: 1;
+  flex-basis: 0;
+} */
+
+.match p:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* .match p:last-child{
+
+  justify-self: right;
+} */
+
+.match .person:hover {
+  color: green;
+  font-weight: bold;
+}
+
+.matchwinner{
+  color:green;
+  font-weight: bold;
+}
+
+.login label {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  line-height: 15px;
+}
+
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    padding-top: 20px;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .recentwinners {
+    text-align: center;
+    max-width: 400px;
   }
+
 }
